@@ -1,0 +1,175 @@
+body {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  text-align: center;
+}
+
+#db-data {
+  display: none;
+  justify-content: space-evenly;
+  text-align: center;
+  border-top: var(--ice) solid 3px;
+  border-radius: 25px;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+#db-data table {
+  width: fit-content;
+}
+
+#db-data table tbody tr {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--dark-grey);
+  border-bottom: var(--ice) solid 3px;
+  border-left: var(--ice) solid 3px;
+  border-right: var(--ice) solid 3px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+#db-data table tbody tr td {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--ice);
+  width: fit-content;
+  max-width: 15%;
+  margin: 5px;
+  padding: 20px 5px;
+}
+
+#db-data table tbody tr td img {
+  height: 30px;
+  border: solid transparent 3px;
+  border-radius: 25px;
+  padding: 5px 5px;
+  transition: 0.5s;
+}
+
+#db-data table tbody tr td img:hover {
+  background-color: var(--light);
+  border: solid #ff0000 3px;
+}
+
+form div {
+  display: none;
+  justify-content: center;
+  color: var(--ice);
+  margin: 10px;
+}
+
+#divdb {
+  display: flex;
+}
+
+#divdate {
+  text-align: center;
+}
+
+#divguest {
+  justify-content: space-evenly;
+}
+
+#edition-label {
+  width: fit-content;
+}
+
+#edition {
+  text-align: center;
+  width: 20px;
+  height: fit-content;
+  margin: auto;
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.split-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.attractions {
+  background-color: var(--dark);
+  border: var(--ice) solid 3px;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-grey);
+  border: var(--ice) solid 3px;
+  border-radius: 25px;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  width: 8vw;
+  margin: 0px 20px;
+}
+
+.description-label {
+  text-align: center;
+  width: auto;
+}
+
+.divider {
+  width: fit-content;
+}
+
+#submit {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#day {
+  text-align: center;
+  width: 40px;
+}
+
+#month {
+  text-align: center;
+  width: fit-content;
+}
+
+#year {
+  text-align: center;
+  width: 80px;
+}
+
+#banddescription,
+#appearancedescription {
+  width: 95%;
+}
+
+@media (max-width: 1100px) {
+  body {
+    flex-direction: column-reverse;
+  }
+  
+  form {
+    width: auto;
+    height: fit-content;
+    margin: 20px;
+  }
+
+  #divguest {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,57 @@
+#display-rs {
+  border: 2px solid black;
+}
+
+.band-image {
+  text-align: center;
+  margin: 20px;
+}
+
+.band-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.band-image figcaption {
+  color: var(--ice);
+  font-family: 'Jazz LET', fantasy;
+}
+
+#recent-news {  
+  background-color: var(--dark-grey);
+  border: var(--ice) solid 2px;
+  border-radius: 25px;
+  width: 55vw;
+  padding: 20px;
+  margin: 20px;
+}
+
+#recent-news h3 {
+  color: var(--light);
+}
+
+#recent-news h2 {
+  text-align: center;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+#recent-news p {
+  color:var(--ice);
+}
+
+@media (max-width: 1100px) {
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .band-image {
+    margin: 20px 20px;
+  }
+
+  #recent-news {
+    width: auto;
+  }
+}

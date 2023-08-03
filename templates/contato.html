@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/contato.css') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+  <link rel="mask-icon" href="{{ url_for('static', filename='images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  
+  <header>
+    <nav>
+      <ul>
+        <li id="homebtn"><a href="#"><img src="{{ img }}"></a></li>
+        <li><a href="home">Home</a></li>
+        <li><a href="agenda">Agenda</a></li>
+        <li><a href="rocksession">Rock Session</a></li>
+        <li><a href="musicas">Músicas</a></li>
+        <li><a href="contato">Contato</a></li>
+      </ul>
+      <h1 id="band_title">FREAK!</h1>
+    </nav>
+  </header>
+
+  <div id="content-contact">
+    <div id="social-medias">
+      <h2>Nossas redes sociais!</h2>
+      <div class="split">
+        <a href="https://www.instagram.com/freaktheband/" target="_blank"><img src="{{ url_for('static', filename='images/Instagram.png') }}"></a>
+        <h3>@freaktheband</h3>
+      </div>
+      <div class="split">
+        <a href="https://www.tiktok.com/@freaktheband" target="_blank"><img src="{{ url_for('static', filename='images/TikTok.png') }}"></a>
+        <h3>@freaktheband</h3>
+      </div>
+      <div class="split">
+        <a href="https://mail.google.com" target="_blank"><img src="{{ url_for('static', filename='images/Email.png') }}"></a>
+        <h3>contact.freaktheband@gmail.com</h3>
+      </div>
+    </div>
+    <form action="/contato" method="post">
+      <h2>Nos mande uma mensagem diretamente!</h2>
+      <div class="split">
+        <label>Nome</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="split">
+        <label>Email</label>
+        <input type="text" id="email" name="email">
+      </div>
+      <div class="split">
+        <label>Assunto</label>
+        <input type="text" id="subject" name="subject">
+      </div>
+      <label>Mensagem</label>
+      <textarea rows=5 id="email-content" name="email-content"></textarea>
+      <input type="submit" value="Enviar" id="submit">
+    </form>
+  </div>

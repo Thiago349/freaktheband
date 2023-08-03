@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/agenda.css') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+  <link rel="mask-icon" href="{{ url_for('static', filename='images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/agenda.js') }}"></script>
+</head>
+<body onload="changemonth('currmonth')">
+  
+  <header>
+    <nav>
+      <ul>
+        <li id="homebtn"><a href="#"><img src="{{ img }}"></a></li>
+        <li><a href="home">Home</a></li>
+        <li><a href="agenda">Agenda</a></li>
+        <li><a href="rocksession">Rock Session</a></li>
+        <li><a href="musicas">Músicas</a></li>
+        <li><a href="contato">Contato</a></li>
+      </ul>
+      <h1 id="band_title">FREAK!</h1>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+    <div class="calendar">
+      <div class="calendarheader">
+        <button id = "prevyear" onclick="changemonth(this.id)">&lt</button>
+        <h2 id = "calendaryear">2023</h2>
+        <button id = "nextyear" onclick="changemonth(this.id)">&gt</button>
+      </div>
+      <div class="calendarheader">
+        <button id = "prevmonth" onclick="changemonth(this.id)">&lt</button>
+        <h2 id = "calendartitle">Julho</h2>
+        <button id = "nextmonth" onclick="changemonth(this.id)">&gt</button>
+      </div>
+      <ul>
+        <li class = "weekdays">D</li>
+        <li class = "weekdays">S</li>
+        <li class = "weekdays">T</li>
+        <li class = "weekdays">Q</li>
+        <li class = "weekdays">Q</li>
+        <li class = "weekdays">S</li>
+        <li class = "weekdays">S</li>
+
+        <button id="1day" onclick="buttbackcolor(this.id)"></button>
+        <button id="2day" onclick="buttbackcolor(this.id)"></button>
+        <button id="3day" onclick="buttbackcolor(this.id)"></button>
+        <button id="4day" onclick="buttbackcolor(this.id)"></button>
+        <button id="5day" onclick="buttbackcolor(this.id)"></button>
+        <button id="6day" onclick="buttbackcolor(this.id)"></button>
+        <button id="7day" onclick="buttbackcolor(this.id)"></button>
+
+        <button id="8day" onclick="buttbackcolor(this.id)"></button>
+        <button id="9day" onclick="buttbackcolor(this.id)"></button>
+        <button id="10day" onclick="buttbackcolor(this.id)"></button>
+        <button id="11day" onclick="buttbackcolor(this.id)"></button>
+        <button id="12day" onclick="buttbackcolor(this.id)"></button>
+        <button id="13day" onclick="buttbackcolor(this.id)"></button>
+        <button id="14day" onclick="buttbackcolor(this.id)"></button>
+
+        <button id="15day" onclick="buttbackcolor(this.id)"></button>
+        <button id="16day" onclick="buttbackcolor(this.id)"></button>
+        <button id="17day" onclick="buttbackcolor(this.id)"></button>
+        <button id="18day" onclick="buttbackcolor(this.id)"></button>
+        <button id="19day" onclick="buttbackcolor(this.id)"></button>
+        <button id="20day" onclick="buttbackcolor(this.id)"></button>
+        <button id="21day" onclick="buttbackcolor(this.id)"></button>
+
+        <button id="22day" onclick="buttbackcolor(this.id)"></button>
+        <button id="23day" onclick="buttbackcolor(this.id)"></button>
+        <button id="24day" onclick="buttbackcolor(this.id)"></button>
+        <button id="25day" onclick="buttbackcolor(this.id)"></button>
+        <button id="26day" onclick="buttbackcolor(this.id)"></button>
+        <button id="27day" onclick="buttbackcolor(this.id)"></button>
+        <button id="28day" onclick="buttbackcolor(this.id)"></button>
+
+        <button id="29day" onclick="buttbackcolor(this.id)"></button>
+        <button id="30day" onclick="buttbackcolor(this.id)"></button>
+        <button id="31day" onclick="buttbackcolor(this.id)"></button>
+        <button id="32day" onclick="buttbackcolor(this.id)"></button>
+        <button id="33day" onclick="buttbackcolor(this.id)"></button>
+        <button id="34day" onclick="buttbackcolor(this.id)"></button>
+        <button id="35day" onclick="buttbackcolor(this.id)"></button>
+
+        <button id="36day" onclick="buttbackcolor(this.id)"></button>
+        <button id="37day" onclick="buttbackcolor(this.id)"></button>
+        <button id="38day" onclick="buttbackcolor(this.id)"></button>
+        <button id="39day" onclick="buttbackcolor(this.id)"></button>
+        <button id="40day" onclick="buttbackcolor(this.id)"></button>
+        <button id="41day" onclick="buttbackcolor(this.id)"></button>
+        <button id="42day" onclick="buttbackcolor(this.id)"></button>
+      </ul>
+    </div>
+    <div class="chosenday">
+      <div class="cdheader">
+        <h2 id = "cdtitle">Selecione um dia</h2>
+      </div>
+        <h3 id = "eventname"></h3>
+      <p id = "eventdescription"></p>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/musicas.css') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+  <link rel="mask-icon" href="{{ url_for('static', filename='images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/musicas.js') }}"></script>
+</head>
+<body>
+  
+  <header>
+    <nav>
+      <ul>
+        <li id="homebtn"><a href="#"><img src="{{ img }}"></a></li>
+        <li><a href="home">Home</a></li>
+        <li><a href="agenda">Agenda</a></li>
+        <li><a href="rocksession">Rock Session</a></li>
+        <li><a href="musicas">Músicas</a></li>
+        <li><a href="contato">Contato</a></li>
+      </ul>
+      <h1 id="band_title">FREAK!</h1>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+    <div class="music-box">
+      <ul id="music-names">
+        <li><button id="lillithbtn", onclick="changeimg('images/Letras/LillithLetra.png', this.id)">Lillith</button></li>
+        <li><button id="mariebtn", onclick="changeimg('images/Letras/MarieLetra.png', this.id)">Marie</button></li>
+      </ul>
+      <section id="music-chosen"><img id="music-chosen-img" src="{{ url_for('static', filename='images/Letras/LillithLetra.png') }}"></section>
+    </div>
+  </div>

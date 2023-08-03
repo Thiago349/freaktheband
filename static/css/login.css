@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  color: var(--ice);
+  font-size: 20px;
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-grey);
+  border: var(--ice) solid 3px;
+  border-radius: 25px;
+  width: 50%;
+  padding: 20px 0px;
+  margin: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+}
+
+#submit {
+  margin: auto;
+}
+
+@media (max-width: 1100px) {
+  form {
+    width: 100%;
+  }
+}

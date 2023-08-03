@@ -1,0 +1,174 @@
+:root {
+  --light: #CAE8FF;
+  --dark: #050a30;
+  --ice: #e2e8f0;
+  --dark-grey: #010101;
+}
+
+body {
+  background: rgb(5,10,48);
+  background: radial-gradient(circle, rgba(5,10,48,1) 50%, rgba(1,1,1,0.6306897759103641) 100%);
+  background-color: var(--dark);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #010101;
+  border: 2px solid var(--dark-grey);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  list-style-type: none;
+  height: 8vh;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul:hover {
+  height: fit-content;
+}
+
+nav ul:hover >  li {
+  display: flex;
+  height: 8vh;
+}
+
+nav ul li {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#homebtn {
+  display: flex;
+  height: 8vh;
+}
+
+nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--dark-grey);
+  font-size: xx-large;
+  color: var(--light);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: auto;
+  height: 100%;
+  padding: 10px 20px;
+}
+
+nav ul li a img {
+  height: 100%;
+  width: auto;
+}
+
+nav ul li a:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+}
+
+#band_title {
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bolder;
+  color: var(--light);
+  max-height: 8vh;
+  margin: 0;
+  padding: 0px 20px;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p, figcaption, label, input, textarea, select{
+  font-size: 1.2em;
+}
+
+#submit {
+  width: fit-content;
+  background-color: var(--light);
+  font-weight: bold;
+  color: var(--dark-grey);
+  border: var(--dark-grey) solid 3px;
+  transition: 0.5s;
+}
+
+#submit:hover {
+  background-color: var(--dark);
+  color: var(--ice);
+}
+
+form input,
+form textarea,
+form select {
+  border: var(--dark) solid 3px;
+  border-radius: 5px;
+  width: 60%;
+  margin: 10px auto;
+}
+
+@media (max-width: 1100px) {
+  nav {
+    align-items: start;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  nav ul li {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  nav ul li a {
+    padding: 0;
+    width: 100%;
+  }
+
+  #band_title {
+    display: none;
+  }
+
+  .content-wrapper {
+    flex-direction: column; /* Stack the elements vertically */
+  }
+
+  h2 {
+    font-size: 2.0em;
+  }
+  
+  h3 {
+    font-size: 1.8em;
+  }
+  
+  p, figcaption, label, input, textarea, select {
+    font-size: 1.6em;
+  }
+}

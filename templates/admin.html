@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin.css') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+  <link rel="mask-icon" href="{{ url_for('static', filename='images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</head>
+<body>
+  <div id="db-data">
+    <table>
+      <tbody id="db-table">
+      </tbody>
+    </table>
+  </div>
+  <form action="/dbpost" method="post">
+    <div id="divname">
+      <label>Título</label>
+      <input type="text" id="name" name="name">
+    </div>
+    <div id="divtag">
+      <label>Tag</label>
+      <select id="tag" name="tag">
+        <option value="rock-session">Rock Session</option>
+        <option value="recording">Gravação</option>
+        <option value="show">Show</option>
+      </select>
+    </div>
+    <div id="divdescription">
+      <label>Descrição</label>
+      <textarea rows=5 id="description" name="description"></textarea>
+    <div id="divedition">
+      <label id="edition-label">Edição</label>
+      <input id="edition" name="edition"></input>
+    </div>
+    </div>
+    <div id="divdate">
+      <label>Data</label>
+      <div class="split">
+        <input type="text" id="day" name="day">
+        <label class="divider">/</label>
+        <select id="month" name="month">
+          <option value="Janeiro">Janeiro</option>
+          <option value="Fevereiro">Fevereiro</option>
+          <option value="Março">Março</option>
+          <option value="Abril">Abril</option>
+          <option value="Maio">Maio</option>
+          <option value="Junho">Junho</option>
+          <option value="Julho">Julho</option>
+          <option value="Agosto">Agosto</option>
+          <option value="Setembro">Setembro</option>
+          <option value="Outubro">Outubro</option>
+          <option value="Novembro">Novembro</option>
+          <option value="Dezembro">Dezembro</option>
+        </select>
+        <label class="divider">/</label>
+        <input type="text" id="year" name="year">
+      </div>
+    </div>
+    <div id="divguest">
+      <div class="split-horizontal attractions">
+        <div class="split">
+          <label>Banda Convidada</label>
+          <input type="text" id="bandname" name="bandname">
+        </div>
+        <div class="split">
+          <label>Link</label>
+          <input type="text" id="bandlink" name="bandlink">
+        </div>
+        <div class="split-horizontal">
+          <label class="description-label">Descrição</label>
+          <textarea rows=5 id="banddescription" name="banddescription"></textarea>
+        </div>
+      </div>
+      <div class="split-horizontal attractions">
+        <div class="split">
+          <label>Participação Especial</label>
+          <input type="text" id="appearancename" name="appearancename">
+        </div>
+        <div class="split">
+          <label>Link</label>
+          <input type="text" id="appearancelink" name="appearancelink">
+        </div>
+        <div class="split-horizontal">
+          <label class="description-label">Descrição</label>
+          <textarea rows=5 id="appearancedescription" name="appearancedescription"></textarea>
+        </div>
+      </div>
+    </div>
+    <div id="divdb">
+      <input type="radio" id="events" name="table" value="events" onclick="changeform(this.id)">
+      <label for="events">Eventos</label><br>
+      <input type="radio" id="rocksession" name="table" value="rocksession" onclick="changeform(this.id)">
+      <label for="rocksession">Rock Session</label><br>
+      <input type="radio" id="news" name="table" value="news" onclick="changeform(this.id)">
+      <label for="news">Notícias</label>
+    </div>
+    <input type="submit" value="Submit" id="submit">
+  </form>
+</body>

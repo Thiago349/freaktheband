@@ -1,0 +1,191 @@
+.chosenday {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+  background-color: var(--dark-grey);
+  border: var(--ice) solid 2px;
+  border-radius: 25px;
+  width: 420px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.calendar {
+  background-color: var(--dark-grey);
+  border: var(--ice) solid 2px;
+  border-radius: 25px;
+  width: 420px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  padding: 0%;
+}
+
+.calendar h2,
+.chosenday h2 {
+  text-align: center;
+  color: var(--light);
+  margin: auto;
+}
+
+.chosenday h3 {
+  color: var(--light);
+}
+
+.chosenday p {
+  color: var(--ice);
+}
+
+.calendarheader {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 50px;
+}
+
+#calendartitle {
+  height: 40px;
+}
+
+.cdheader {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+}
+
+#prevmonth,
+#nextmonth,
+#prevyear,
+#nextyear {
+  text-align: center;
+  background-color: var(--dark-grey);
+  color: var(--ice);
+  font-size: 1.6em;
+  font-weight: bolder;
+  border: none;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  margin: auto 10px;
+}
+
+.weekdays {
+  text-align: center;
+  background-color: var(--dark-grey);
+  color: var(--ice);
+  font-weight: bolder;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+ul li {
+  font-size: 1.4em;
+}
+
+ul button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--ice);
+  font-size: 1.2em;
+  border: none;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+ul button:hover,
+#nextmonth:hover,
+#prevmonth:hover,
+#nextyear:hover,
+#prevyear:hover {
+  border: 2px solid  var(--ice);
+}
+
+.show {
+  background-color: var(--dark);
+  font-weight: bolder;
+}
+
+.recording {
+  background-color: var(--light);
+  color: var(--dark);
+  font-weight: bolder;
+}
+
+.rock-session {
+  background-color: #00ffff;
+  color: var(--dark);
+  font-weight: bolder;
+}
+
+.current {
+  background-color:  var(--dark-grey);
+}
+
+.notcurrent {
+  background-color: var(--dark-grey);
+  opacity: 30%;
+}
+
+@media (max-width: 1100px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .calendar,
+  .chosenday {
+    width: 70vw;
+    margin: 2.5vw auto;
+  }
+
+  .calendar {
+    height: fit-content;
+  }
+
+  .calendarheader,
+  .cdheader {
+    height: 8vw;
+  }
+
+  .weekdays {
+    width: 6vw;
+    height: 6vw;
+    margin: 0vw 2vw;
+  }
+
+  ul li {
+    font-size: 1.6em;
+  }
+
+  ul button {
+    text-align: center;
+    font-size: 1.4em;
+    border-radius: 3.5vw;
+    width: 6vw;
+    height: 6vw;
+    margin: 1.5vw 2vw;
+  }
+
+  #prevmonth,
+  #nextmonth,
+  #prevyear,
+  #nextyear {
+    font-size: 1.8em;
+    width: 6vw;
+    margin: auto 2vw;
+  }
+}

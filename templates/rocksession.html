@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/rocksession.css') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+  <link rel="mask-icon" href="{{ url_for('static', filename='images/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/rocksession.js') }}"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li id="homebtn"><a href="#"><img src="{{ img }}"></a></li>
+        <li><a href="home">Home</a></li>
+        <li><a href="agenda">Agenda</a></li>
+        <li><a href="rocksession">Rock Session</a></li>
+        <li><a href="musicas">Músicas</a></li>
+        <li><a href="contato">Contato</a></li>
+      </ul>
+      <h1 id="band_title">FREAK!</h1>
+    </nav>
+  </header>
+
+  <div class="content-rs">
+    <section id="RSinfos">
+      <div class="event-infobox" id="event-description">
+        <section class="guest-box">
+          <h2>SOBRE</h2>
+          <p id="event-about-text">O Rock Session é um evento organizado pela Freak! e é imperdível para a galera do rock em Belo Horizonte! O objetivo é nos unir e abrir espaço para outras bandas e músicos, proporcionando uma noite de muita música de qualidade pra todo mundo!</p>
+          <img id="rs-logo" src="{{ fklogo }}">
+        </section>
+      </div>
+      <div class="event-infobox" id="event-guests">
+        <section class="guest-box" id="guest-band">
+          <section class="splitheader">
+            <h2>BANDA CONVIDADA</h2>
+            <a id="guest-band-insta" target="_blank"><img src="{{ url_for('static', filename='images/Instagram.png') }}"></a>
+          </section>
+          <section class="split">
+            <p id="guest-band-text">A cada edição, convidamos uma banda incrível para participar do evento, trazendo diferentes lados do Rock N' Roll pra galera!</p>
+            <img id="guest-band-image" src="{{ url_for('static', filename='images/BandSilhouette.png') }}">
+          </section>
+        </section>
+        <section class="guest-box" id="guest-appearance">
+          <section class="splitheader">
+            <h2>PARTICIPAÇÃO ESPECIAL</h2>
+            <a id="guest-appearance-insta" target="_blank"><img src="{{ url_for('static', filename='images/Instagram.png') }}"></a>
+          </section>
+          <section class="split">
+            <p id="guest-appearance-text">Sempre reservamos espaço para participações especiais surpreendentes, trazendo artistas talentosos para dividir o palco com a gente!</p>
+            <img id="guest-appearance-image" src="{{ url_for('static', filename='images/GuestSilhouette.png') }}">
+          </section>
+        </section>
+      </div>
+    </section>
+    <section id="RSbuttons">
+      <button class="RSimg" id="RS03card" onclick="changeevent(this.id)"></button>
+      <button class="RSimg" id="RS02card" onclick="changeevent(this.id)"></button>
+      <button class="RSimg" id="RS01card" onclick="changeevent(this.id)"></button>
+    </section>
+  </div>
